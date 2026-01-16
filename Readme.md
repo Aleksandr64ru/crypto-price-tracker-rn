@@ -49,20 +49,26 @@ crypto-price-tracker-rn/
 ```
 ## 🛠️ Установка и запуск
 1. Клонируйте репозиторий
-git clone https://github.com/yourusername/crypto-price-tracker-rn.git
-cd crypto-price-tracker-rn
+   
+```bash git clone https://github.com/yourusername/crypto-price-tracker-rn.git```
+```bash cd crypto-price-tracker-rn```
 
-2. Установите зависимости
-npm install
+3. Установите зависимости
+   
+```bash npm install ```
 
-3. Запустите приложение
-npm start
+5. Запустите приложение
 
-4. Установите дополнительные зависимости (если требуется)
+```bash npm start ```
+
+6. Установите дополнительные зависимости (если требуется)
 
 Для корректной работы приложения может потребоваться установить следующие зависимости:
 
-expo install react-native-chart-kit react-native-svg react-native-skeleton-content axios
+```bash expo install react-native-chart-kit ```
+
+```bas react-native-svg axios ```
 
 
 Приложение можно открыть через Expo Go на iOS/Android или на эмуляторе.
+
