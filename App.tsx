@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { ThemeProvider, useTheme } from './src/context/ThemeContext'; // Импортируем ThemeContext
+import Header from './src/components/Header';
+import CryptoList from './src/components/CryptoList';
+
+const AppContent = () => {
+  const { isDarkMode, theme } = useTheme(); // Получаем тему из контекста
+
+  return (
+    <SafeAreaView
+      style={[styles.safeArea, { backgroundColor: theme.background }]}
+    >
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <Header />
+      <View style={styles.listContainer}>
+        <CryptoList />
+      </View>
+    </SafeAreaView>
+  );
+};
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  safeArea: { flex: 1 },
+  listContainer: { flex: 1, paddingHorizontal: 16 },
 });
