@@ -4,11 +4,9 @@
     "slug": "crypto-price-tracker-rn",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
-      "image": "", 
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,14 +15,11 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "",
         "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      }
     },
     "web": {
-      "favicon": "" 
+      "bundler": "metro"
     }
   }
 }
